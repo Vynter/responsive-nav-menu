@@ -1,1 +1,93 @@
-.main {}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+.main {
+    background: url("pexels-photo-640781.jpeg") center;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-size: cover;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rosybrown;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-width: 360px;
+    height: 100px;
+}
+
+ul {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 35px;
+    height: 100%;
+    transition: 0.4s;
+}
+
+.show:hover, a:hover, .hide:hover {
+    color: rgb(190, 51, 51);
+}
+
+.show, .hide {
+    transition: 0.4s;
+    font-size: 35px;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+}
+
+#chk {
+    position: absolute;
+    right: 5%;
+    visibility: hidden;
+    z-index: -1;
+}
+
+@media (max-width:850px) {
+    ul {
+        /*display: none;*/
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(143, 95, 95);
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu {
+        padding: 0;
+    }
+    #chk {
+        z-index: 5;
+        visibility: visible;
+        width: 20px;
+        height: 35px;
+    }
+    .show {
+        display: block;
+    }
+    a {
+        display: block;
+    }
+}
