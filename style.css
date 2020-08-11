@@ -55,6 +55,7 @@ a {
     right: 5%;
     cursor: pointer;
     display: none;
+    color: white;
 }
 
 #chk {
@@ -62,6 +63,10 @@ a {
     right: 5%;
     visibility: hidden;
     z-index: -1;
+}
+
+.contenu {
+    padding: 10px;
 }
 
 @media (max-width:850px) {
