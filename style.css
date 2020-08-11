@@ -33,6 +33,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    transition: 0.7s;
 }
 
 a {
@@ -71,23 +72,34 @@ a {
         height: 100vh;
         background: rgb(143, 95, 95);
         top: 0;
-        left: 0;
+        right: -1000%;
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        justify-content: space-around;
     }
     .nav-menu {
-        padding: 0;
+        //padding: 0;
     }
     #chk {
         z-index: 5;
-        visibility: visible;
         width: 20px;
         height: 35px;
     }
     .show {
         display: block;
     }
+    .hide {
+        position: absolute;
+        display: block;
+        z-index: 5;
+        top: 20px;
+        right: 5%;
+    }
     a {
         display: block;
+    }
+    #chk:checked~ul {
+        right: 0;
     }
 }
